@@ -1,0 +1,139 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+// Background Colors
+$default-color: #d2efd9;
+// $default-color: #7755C1; // initial design
+$active-color: #2B9736;
+$warning-color: #FFC700;
+$danger-color: #AC2E2E;
+
+$action-button-background: rgba(0, 0, 0, 0.12);
+$action-button-background-hover: rgba(0, 0, 0, 0.2);
+
+// Text Colors
+$metadata-text-color: #1d1d1d;
+#app {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    &.default {
+        background-color: $default-color;
+    }
+    &.active {
+        background-color: $active-color;
+    }
+    &.warning {
+        background-color: $warning-color;
+    }
+    &.danger {
+        background-color: $danger-color;
+    }
+}
+
+.time-container {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 95%;
+    .time-text {
+        margin: 0;
+        font-size: 80px;
+    }
+    .metadata-text, .metadata-input {
+        margin: 0;
+        font-size: 30px;
+        color: $metadata-text-color;
+        border: 0;
+        background: none;
+        line-height: 60px;
+        font-family: inherit;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+    }
+}
+
+.action-box-container {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    .action-button {
+        background: $action-button-background;
+        border: none;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: inherit;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 20px;
+        &:hover {
+            background-color: $action-button-background-hover;
+        }
+    }
+}
+.records-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #0000004a;
+}
+
+.records-box {
+    background: white;
+    min-width: 50%;
+    // min-height: 50vh;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.tbl-records {
+    width: 100%;
+    text-align: left;
+    table-layout: auto;
+    th {
+        padding: 20px 15px;
+    }
+    td {
+        padding: 15px
+    }
+    th {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: inherit;
+        background-color: #9fb0eb;
+    }
+    tr.body {
+        background: #d2f8d6;
+        &.red {
+            background: #e7a7a7;
+        }
+    }
+}
+
+.remove-text {
+    color: $danger-color;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}
